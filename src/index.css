@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+below code  (line 9-22) is to hide the scroll bar in tailwind css
+ Here are two steps to follow in order to hide a scrollbar in your HTML elements using TailwindCss. */
+ /* Go to your global.css file styles/global.css and past this code: */
+@layer utilities {
+    @variants responsive {
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      .no-scrollbar::-webkit-scrollbar {
+          display: none;
+      }
+
+      /* Hide scrollbar for IE, Edge and Firefox */
+      .no-scrollbar {
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;  /* Firefox */
+      }
+    }
+  }
+
+  /* step-2 :  Now use no-scrollbar  in classNme to hide the scrollbar in your elements.
+   */
