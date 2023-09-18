@@ -13,7 +13,7 @@ const getPopularMovies=async()=>{
         }
     });
     const popularMovies=await data.json()
-    console.log(popularMovies.results)
+
     dispatch(addPopularMovies(popularMovies.results))
 
   }

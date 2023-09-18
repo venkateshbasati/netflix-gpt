@@ -13,7 +13,7 @@ const getTopRatedMovies=async()=>{
         }
     });
     const topRatedMovies=await data.json()
-    console.log(topRatedMovies.results)
+
     dispatch(addTopRatedMovies(topRatedMovies.results))
 
   }

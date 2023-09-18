@@ -28,7 +28,7 @@ const GptSearchBar = () => {
             messages: [{ role: 'user', content: gptQuery }],
             model: 'gpt-3.5-turbo',
           });
-          console.log(gptResults.choices)
+       
     
            //if gptResults?.choices are valid then only give gptMovies
          if(gptResults?.choices){
@@ -42,7 +42,7 @@ const GptSearchBar = () => {
          
           // So, we have to write again promise.all(promiseArray) to get the full list of movie data
           const gptTMDBresults=await Promise.all(promiseArray)
-          console.log(gptTMDBresults)
+ 
           dispatch(addGptMovies(gptMovies))
           dispatch(addGptMovieResults(gptTMDBresults))
 

@@ -35,14 +35,14 @@ const Header = () => {
     const unsubcribe= onAuthStateChanged(auth, (user) => {
       if (user) {
         //user is signed In
-        console.log('onAuth add render')
+   
 
         const { uid, email, displayName, photoURL } = user;
         dispatch(addUser({ uid: uid, email: email, fullname: displayName, photoURL:photoURL }));
         navigate("/browse")
       } else {
 
-        console.log('onAuth remove render ')
+   
         // User is signed out
         dispatch(removeUser());
         navigate("/")

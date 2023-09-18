@@ -13,7 +13,7 @@ const getNowPlayingMovies=async()=>{
     }
 });
     const nowPlayingmovies=await data.json()
-    console.log(nowPlayingmovies.results)
+
     dispatch(addNowPlayingMovies(nowPlayingmovies.results))
 
   }

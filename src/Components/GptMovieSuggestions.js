@@ -1,10 +1,12 @@
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import MovieList from './MovieList'
 
 const GptMovieSuggestions = () => {
+
+  const dispatch=useDispatch()
   const {gptMovieResults,gptTmdbResults}= useSelector((store) => store.gpt);
   if(!gptMovieResults || !gptTmdbResults) return null 
-
+  
  
 
   {

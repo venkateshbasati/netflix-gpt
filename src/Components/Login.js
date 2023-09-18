@@ -24,7 +24,7 @@ const Login = () => {
   const fullNameRef=useRef(null)
 
   const handleSignInform = () => {
-    console.log('sign render')
+
     setSignIn(!signIn);
   };
 

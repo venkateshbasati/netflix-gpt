@@ -70,33 +70,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 
-import { useSelector } from 'react-redux'
-import MovieList from './MovieList'
 
-const GptMovieSuggestions = () => {
-  const {gptMovieResults,gptTmdbResults}= useSelector((store) => store.gpt);
-  if(!gptMovieResults || !gptTmdbResults) return null 
-
- 
-
-  {
-    //if no gpt movie results then null because gpt movies data may get get late so... or we can show some shimmer UI
-  }
-  return (
-    <div  className='bg-black bg-opacity-80  '>
-     {gptMovieResults.map((movieName, index) => (
-          <MovieList
-            key={movieName}
-            title={movieName}
-            movies={gptTmdbResults?.results[index]}
-          />
-        ))}
-
-    </div>
-  )
-}
-
-export default GptMovieSuggestions
 
 // import { useSelector } from "react-redux";
 // import MovieList from "./MovieList";
